@@ -1,3 +1,56 @@
+body {
+  background: conic-gradient(from 180deg at 50% 57.62%, #000237 -14.95deg, #000000 27.9deg, #0e0034 57.28deg, #370000 107.08deg, #160000 171.16deg, #2f0000 196.12deg, #350000 218.37deg, #000000 288.84deg, #000123 324.86deg, #000237 345.05deg, #000000 387.9deg);
+  color: #fff;
+}
+
+header {
+  padding: 34px 0 0 0;
+  width: 100%;
+  top: 0;
+}
 header h1 {
-  color: pink;
+  color: #fff;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+header .login-area {
+  top: 34px;
+  right: 52px;
+}
+header .login-area .button {
+  font-size: 16px;
+  line-height: 36px;
+  padding: 0 12px;
+  border-radius: 3px;
+  margin: 0 5px;
+}
+header .login-area .button.button-primary {
+  background-color: #00ffe0;
+  color: #333;
+}
+header .login-area .button.button-secondary {
+  color: #00ffe0;
+  background-color: rgba(0, 255, 224, 0.5);
+}
+header button {
+  color: #00ffe0;
+  line-height: 36px;
+  padding: 0 2px;
+  margin: 0 15px;
+}
+
+section {
+  height: 900px;
+}
+section h1 {
+  color: #7963fe;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 87px;
+  letter-spacing: 0.07em;
+}
+section h1 span {
+  font-weight: 700;
+  line-height: 71px;
 }
