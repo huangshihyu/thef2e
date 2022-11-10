@@ -55,8 +55,7 @@ $(document).ready(() => {
       { color: '#FFF', fontSize: '24px', fontWeight: 500 },
       0,
     )
-    .fromTo('.banner h1:last-child', { opacity: 1 }, { opacity: 0, fontSize: '24px' }, 0)
-    .fromTo('.title-area', { transform: translateY('0px') }, { transform: translateY('40px') }, 0);
+    .fromTo('.banner h1:last-child', { opacity: 1 }, { opacity: 0, fontSize: '24px' }, 0);
 
   // 測試動態
   const classTrigger = gsap.timeline({

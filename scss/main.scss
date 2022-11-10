@@ -91,3 +91,32 @@ section {
     right: 0;
   }
 }
+#section2 {
+  .jelly {
+    position: absolute;
+    top: 0;
+    left: calc((100% - 381px) / 2);
+    z-index: 3;
+  }
+  .information {
+    .text-block {
+      position: absolute;
+      z-index: 2;
+      background: no-repeat center/80% url('../images/section2-text-BG.png');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 400px;
+      height: 200px;
+    }
+
+    .text-block:nth-child(1) {
+      top: 20%;
+      left: 5%;
+    }
+    .text-block:nth-child(2) {
+      top: 40%;
+      left: 5%;
+    }
+  }
+}
