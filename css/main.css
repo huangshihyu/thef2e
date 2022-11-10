@@ -16,6 +16,7 @@ section header {
   padding: 34px 0 0 0;
   width: 100%;
   top: 0;
+  z-index: 10;
 }
 section header h1 {
   color: #fff;
@@ -82,6 +83,7 @@ section #insectR {
   top: 0;
   left: calc((100% - 381px) / 2);
   z-index: 3;
+  transform-origin: center;
 }
 #section2 .information .text-block {
   position: absolute;
@@ -109,4 +111,14 @@ section #insectR {
   top: 22%;
   left: calc((100% - 700px) / 2 + 351px);
   background: no-repeat center/80% url("../images/section2-text3-BG.png");
+}
+
+#section3 {
+  height: 200vh;
+}
+#section3 .scrollElement {
+  color: pink;
+}
+#section3 .scrollElement div {
+  height: 40px;
 }

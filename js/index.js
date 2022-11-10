@@ -34,21 +34,28 @@ $(document).ready(() => {
       $('#title').addClass('hide');
       $('.banner h1:first-child').removeClass('hide');
     }
+
+    // section 2 jelly
+    if (y > 700 && y < 1050) {
+      $('.jelly').css('top', y - 700 + 'px');
+    }
   }
+
   $(window).scroll(() => {
     const scrolled = $(window).scrollTop();
     parallaxScroll(scrolled);
   });
+  gsap.registerPlugin(ScrollTrigger);
   // section 1
-  const sectionOneTrigger = gsap.timeline({
-    scrollTrigger: {
-      trigger: '#section1',
-      start: 'top top',
-      end: '+300',
-      scrub: true,
-    },
-  });
-  sectionOneTrigger
+  const sectionOneTrigger = gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: '#section1',
+        start: 'top top',
+        end: '+300',
+        scrub: true,
+      },
+    })
     .fromTo(
       '.banner h1:first-child',
       { opacity: 1 },
@@ -56,24 +63,31 @@ $(document).ready(() => {
       0,
     )
     .fromTo('.banner h1:last-child', { opacity: 1 }, { opacity: 0, fontSize: '24px' }, 0);
-
   // section 2
-  const sectionTwoTrigger = gsap.timeline({
-    scrollTrigger: {
-      trigger: '#section2',
-      start: 'top top',
-      scrub: true,
-    },
-  });
-  sectionTwoTrigger.fromTo(
-    '.jelly',
-    { top: 0 },
-    {
-      top: function () {
-        return;
+  const sectionTwoTrigger = gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: '#section2',
+        start: 'top top',
+        scrub: true,
       },
-    },
-  );
+    })
+    .fromTo('.jelly', { transform: none }, { transform: scale(2, 0.5) }, 0);
+
+  // 測試
+  let clouds = gsap.timeline();
+  ScrollTrigger.create({
+    animation: clouds,
+    trigger: '.scrollElement',
+    start: 'top top',
+    end: '70% 100%',
+    scrub: 1,
+  });
+
+  clouds.to('#cloud1', { x: 500 }, 0);
+  clouds.to('#cloud2', { x: 1000 }, 0);
+  clouds.to('#cloud3', { x: -1000 }, 0);
+  clouds.to('#cloud4', { x: -700, y: 25 }, 0);
 });
 
 // document.addEventListener('DOMContentLoaded', function () {

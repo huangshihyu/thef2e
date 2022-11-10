@@ -28,6 +28,7 @@ section {
     padding: 34px 0 0 0;
     width: 100%;
     top: 0;
+    z-index: 10;
     h1 {
       color: #fff;
       font-weight: 500;
@@ -97,6 +98,7 @@ section {
     top: 0;
     left: calc((100% - 381px) / 2);
     z-index: 3;
+    transform-origin: center;
   }
   .information {
     .text-block {
@@ -126,6 +128,15 @@ section {
       top: 22%;
       left: calc(((100% - 700px) / 2) + 351px);
       background: no-repeat center/80% url('../images/section2-text3-BG.png');
+    }
+  }
+}
+#section3 {
+  height: 200vh;
+  .scrollElement {
+    color: pink;
+    div {
+      height: 40px;
     }
   }
 }
