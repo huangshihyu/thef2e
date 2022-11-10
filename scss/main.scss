@@ -17,9 +17,13 @@ body {
   color: #fff;
   overflow-x: hidden;
 }
+.hide {
+  display: none;
+}
 
 section {
-  height: 900px;
+  height: 700px;
+  border-bottom: 2px solid red;
   header {
     padding: 34px 0 0 0;
     width: 100%;
@@ -29,6 +33,7 @@ section {
       font-weight: 500;
       font-size: 24px;
       line-height: 28px;
+      letter-spacing: 0.07em;
     }
     .login-area {
       top: 34px;
@@ -57,7 +62,7 @@ section {
       margin: 0 15px;
     }
   }
-  .title {
+  .banner {
     top: 300px;
     width: 100%;
     color: $main-purple;
