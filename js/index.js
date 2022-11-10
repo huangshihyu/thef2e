@@ -57,15 +57,23 @@ $(document).ready(() => {
     )
     .fromTo('.banner h1:last-child', { opacity: 1 }, { opacity: 0, fontSize: '24px' }, 0);
 
-  // 測試動態
-  const classTrigger = gsap.timeline({
+  // section 2
+  const sectionTwoTrigger = gsap.timeline({
     scrollTrigger: {
-      trigger: '#section1',
+      trigger: '#section2',
       start: 'top top',
       scrub: true,
     },
   });
-  // classTrigger.fromTo('.banner h1:first-child', { opacity: 1 }, { opacity: 0 });
+  sectionTwoTrigger.fromTo(
+    '.jelly',
+    { top: 0 },
+    {
+      top: function () {
+        return;
+      },
+    },
+  );
 });
 
 // document.addEventListener('DOMContentLoaded', function () {
